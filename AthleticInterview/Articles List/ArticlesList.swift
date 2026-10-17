@@ -37,7 +37,11 @@ struct ArticlesList: View {
             .navigationDestination(item: $selectedArticle) { model in
                 ArticleDetailView(viewModel: model)
             }
-            .searchable(text: $searchText, prompt: "Search titles")
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "Search titles"
+            )
             .task(id: searchText) {
                 await debounceSearch()
             }

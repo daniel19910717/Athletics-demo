@@ -27,6 +27,10 @@ final class InterviewUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
+        let searchField = app.searchFields["Search titles"]
+        XCTAssertTrue(searchField.waitForExistence(timeout: 20))
+        XCTAssertFalse(app.keyboards.element.exists)
+
         let article = app.buttons.containing(NSPredicate(format: "label CONTAINS %@", "Wiggins")).firstMatch
         XCTAssertTrue(article.waitForExistence(timeout: 20))
         article.tap()
@@ -34,6 +38,10 @@ final class InterviewUITests: XCTestCase {
         let body = app.staticTexts.containing(NSPredicate(format: "label BEGINSWITH %@", "Lorem ipsum")).firstMatch
         XCTAssertTrue(body.waitForExistence(timeout: 5))
         XCTAssertTrue(app.navigationBars.staticTexts["Articles"].exists)
+
+        app.buttons["Back"].tap()
+        XCTAssertTrue(searchField.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.keyboards.element.exists)
     }
 
     func testLaunchPerformance() throws {
