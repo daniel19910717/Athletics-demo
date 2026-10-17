@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ArticleDetailView: View {
+    @Environment(\.dismiss) private var dismiss
+
     let viewModel: ArticleViewModel
 
     var body: some View {
@@ -24,7 +26,25 @@ struct ArticleDetailView: View {
         .background(Color(uiColor: .systemBackground))
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("")
+        .navigationBarBackButtonHidden(true)
+        .toolbarColorScheme(.light, for: .navigationBar)
         .toolbar(.hidden, for: .tabBar)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: { dismiss() }) {
+                    Image(systemName: "chevron.backward")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.black)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Back")
+            }
+            ToolbarItem(placement: .principal) {
+                Text("Articles")
+                    .font(.headline)
+                    .foregroundStyle(.black)
+            }
+        }
     }
 
     private var headerImage: some View {

@@ -33,7 +33,7 @@ final class InterviewUITests: XCTestCase {
 
         let body = app.staticTexts.containing(NSPredicate(format: "label BEGINSWITH %@", "Lorem ipsum")).firstMatch
         XCTAssertTrue(body.waitForExistence(timeout: 5))
-        XCTAssertTrue(app.navigationBars.buttons["Articles"].exists)
+        XCTAssertTrue(app.navigationBars.staticTexts["Articles"].exists)
     }
 
     func testLaunchPerformance() throws {
