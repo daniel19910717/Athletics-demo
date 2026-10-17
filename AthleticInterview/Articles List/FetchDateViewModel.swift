@@ -1,26 +1,15 @@
 import Combine
-import SwiftUI
+import Foundation
 
 final class FetchDateViewModel: ObservableObject {
-    var text: String
+    let referenceDate: Date
 
-    private let fetchDate: Date
-    private var timer: AnyCancellable?
+    var text: String {
+        let secondsAgo = Int(abs(referenceDate.timeIntervalSinceNow))
+        return "Last fetched \(secondsAgo) seconds ago"
+    }
 
     init(referenceDate: Date) {
-        let secondsAgo = Int(abs(referenceDate.timeIntervalSinceNow))
-        text = "Last fetched \(secondsAgo) seconds ago"
-        fetchDate = referenceDate
-
-        timer = Timer.publish(
-            every: 1,
-            on: .main,
-            in: .default
-        )
-        .autoconnect()
-        .sink { [weak self] date in
-            let secondsAgo = Int(abs(referenceDate.timeIntervalSince(date)))
-            self?.text = "Last fetched \(secondsAgo) seconds ago"
-        }
+        self.referenceDate = referenceDate
     }
 }

@@ -23,6 +23,11 @@
 		96A9CD0D2AF98FC4004D7393 /* ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9CD0C2AF98FC4004D7393 /* ArticlesList.swift */; };
 		96A9CD0F2AF991F9004D7393 /* ArticleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9CD0E2AF991F9004D7393 /* ArticleRow.swift */; };
 		96A9CD152AF9A25F004D7393 /* AthleticInterviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9CD142AF9A25F004D7393 /* AthleticInterviewApp.swift */; };
+		A1B2C3D12AF9C001004D7392 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D12AF9C001004D7391 /* ArticleDetailView.swift */; };
+		A1B2C3D12AF9C002004D7392 /* ArticleQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D12AF9C002004D7391 /* ArticleQuery.swift */; };
+		A1B2C3D12AF9C003004D7392 /* CatalogModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D12AF9C003004D7391 /* CatalogModels.swift */; };
+		A1B2C3D12AF9C004004D7392 /* ArticleFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D12AF9C004004D7391 /* ArticleFilterBar.swift */; };
+		A1B2C3D12AF9C005004D7392 /* ArticleQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D12AF9C005004D7391 /* ArticleQueryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		96A9CD0C2AF98FC4004D7393 /* ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesList.swift; sourceTree = "<group>"; };
 		96A9CD0E2AF991F9004D7393 /* ArticleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRow.swift; sourceTree = "<group>"; };
 		96A9CD142AF9A25F004D7393 /* AthleticInterviewApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleticInterviewApp.swift; sourceTree = "<group>"; };
+		A1B2C3D12AF9C001004D7391 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		A1B2C3D12AF9C002004D7391 /* ArticleQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleQuery.swift; sourceTree = "<group>"; };
+		A1B2C3D12AF9C003004D7391 /* CatalogModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModels.swift; sourceTree = "<group>"; };
+		A1B2C3D12AF9C004004D7391 /* ArticleFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFilterBar.swift; sourceTree = "<group>"; };
+		A1B2C3D12AF9C005004D7391 /* ArticleQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleQueryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				969E12162AF988730047A441 /* ArticleViewModelTests.swift */,
+				A1B2C3D12AF9C005004D7391 /* ArticleQueryTests.swift */,
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				96A9CD032AF98B84004D7393 /* AthleticNetworkModel.swift */,
+				A1B2C3D12AF9C003004D7391 /* CatalogModels.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -162,6 +174,7 @@
 			children = (
 				96A9CD0C2AF98FC4004D7393 /* ArticlesList.swift */,
 				96A9CCFE2AF98AE3004D7393 /* ArticlesViewModel.swift */,
+				A1B2C3D12AF9C004004D7391 /* ArticleFilterBar.swift */,
 				4D746B422AFB69DC00FC5513 /* FetchDateRow.swift */,
 				4D746B402AFB69D300FC5513 /* FetchDateViewModel.swift */,
 				969F691E2AFBF05300DAE206 /* ReturnToTopButton.swift */,
@@ -180,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				96A9CD062AF98BDE004D7393 /* Article.swift */,
+				A1B2C3D12AF9C001004D7391 /* ArticleDetailView.swift */,
+				A1B2C3D12AF9C002004D7391 /* ArticleQuery.swift */,
 				96A9CD0E2AF991F9004D7393 /* ArticleRow.swift */,
 				96A9CCFF2AF98AE3004D7393 /* ArticleViewModel.swift */,
 			);
@@ -330,6 +345,10 @@
 				96A9CD042AF98B84004D7393 /* AthleticNetworkModel.swift in Sources */,
 				96A9CD002AF98AE3004D7393 /* ArticlesViewModel.swift in Sources */,
 				96A9CD0F2AF991F9004D7393 /* ArticleRow.swift in Sources */,
+				A1B2C3D12AF9C001004D7392 /* ArticleDetailView.swift in Sources */,
+				A1B2C3D12AF9C002004D7392 /* ArticleQuery.swift in Sources */,
+				A1B2C3D12AF9C003004D7392 /* CatalogModels.swift in Sources */,
+				A1B2C3D12AF9C004004D7392 /* ArticleFilterBar.swift in Sources */,
 				4D746B432AFB69DC00FC5513 /* FetchDateRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				969E12172AF988730047A441 /* ArticleViewModelTests.swift in Sources */,
+				A1B2C3D12AF9C005004D7392 /* ArticleQueryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +641,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Interview;
+				TEST_TARGET_NAME = AthleticInterview;
 			};
 			name = Debug;
 		};
@@ -643,7 +663,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Interview;
+				TEST_TARGET_NAME = AthleticInterview;
 			};
 			name = Release;
 		};

@@ -5,7 +5,7 @@ struct ArticleRow: View {
     
     var body: some View {
         GeometryReader { proxy in
-            AsyncImage(url: viewModel.imageUrl!) { phase in
+            AsyncImage(url: viewModel.imageUrl) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
@@ -13,7 +13,7 @@ struct ArticleRow: View {
                         .frame(width: proxy.size.width, height: proxy.size.height)
                         .clipped()
                 } else {
-                    Color.clear
+                    Color.secondary.opacity(0.15)
                 }
             }
             .overlay {
@@ -46,7 +46,10 @@ struct ArticleRow: View {
                 body: "This is a test",
                 createdAt: Date(),
                 updatedAt: Date(),
-                deletedAt: nil
+                deletedAt: nil,
+                author: nil,
+                league: nil,
+                team: nil
             )
         )
     )

@@ -11,7 +11,10 @@ class ArticleViewModelTests: XCTestCase {
         body: "Test article body.",
         createdAt: Date(),
         updatedAt: Date(),
-        deletedAt: nil
+        deletedAt: nil,
+        author: nil,
+        league: nil,
+        team: nil
     )
 
     override func setUp() {
@@ -22,6 +25,7 @@ class ArticleViewModelTests: XCTestCase {
 
     func testInitialization() {
         XCTAssertEqual(subject.title, article.title)
+        XCTAssertEqual(subject.body, article.body)
         XCTAssertEqual(subject.imageUrl, URL(string: article.imageUrlString))
     }
 }

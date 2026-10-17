@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct ReturnToTopButton: View {
+    var action: () -> Void = {}
+
     var body: some View {
-        Button(action: {}) {
+        Button(action: action) {
             Circle()
                 .fill(.white)
                 .frame(width: 44, height: 44)

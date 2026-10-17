@@ -23,6 +23,19 @@ final class InterviewUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    func testSelectingAnArticlePushesItsDetail() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        let article = app.buttons.containing(NSPredicate(format: "label CONTAINS %@", "Wiggins")).firstMatch
+        XCTAssertTrue(article.waitForExistence(timeout: 20))
+        article.tap()
+
+        let body = app.staticTexts.containing(NSPredicate(format: "label BEGINSWITH %@", "Lorem ipsum")).firstMatch
+        XCTAssertTrue(body.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars.buttons["Articles"].exists)
+    }
+
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
